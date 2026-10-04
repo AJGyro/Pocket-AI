@@ -1,0 +1,188 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-03T08:01:03.8924502Z",
+  "updatedAt": "2026-10-03T08:01:19.2320948Z",
+  "application": {
+    "pid": 2136,
+    "processName": "chrome",
+    "mainWindowHandle": 1967876,
+    "mainWindowTitle": "Pocket AI - Google Chrome"
+  },
+  "selectorPolicy": "stable",
+  "elements": {
+    "e5d4352c": {
+      "name": "Pocket AI - Google Chrome",
+      "controlType": "Window",
+      "className": "Chrome_WidgetWin_1",
+      "runtimeId": [
+        42,
+        1967876
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T08:01:07.1664869Z"
+    },
+    "cc11910d": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "Intermediate D3D Window",
+      "runtimeId": [
+        42,
+        2033398
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:07.1788057Z"
+    },
+    "2722a136": {
+      "automationId": "",
+      "name": "Pocket AI - Google Chrome - venkie (dummy)",
+      "controlType": "Pane",
+      "className": "BrowserRootView",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8592
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T08:01:07.1805349Z"
+    },
+    "de97e349": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "NonClientView",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8594
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:07.1814083Z"
+    },
+    "51ceaebc": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "BrowserFrameViewWin",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8595
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:07.182191Z"
+    },
+    "0550feea": {
+      "name": "Pocket AI - Google Chrome",
+      "controlType": "Window",
+      "className": "Chrome_WidgetWin_1",
+      "runtimeId": [
+        42,
+        1967876
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T08:01:19.2160589Z"
+    },
+    "4cf7268d": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "Intermediate D3D Window",
+      "runtimeId": [
+        42,
+        2033398
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:19.2263249Z"
+    },
+    "6f186918": {
+      "automationId": "",
+      "name": "Pocket AI - Google Chrome - venkie (dummy)",
+      "controlType": "Pane",
+      "className": "BrowserRootView",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8592
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T08:01:19.2282228Z"
+    },
+    "fe45bc3d": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "NonClientView",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8594
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:19.2291934Z"
+    },
+    "040e815a": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "BrowserFrameViewWin",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8595
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:19.230069Z"
+    },
+    "3aed738c": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "BrowserCaptionButtonContainer",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8598
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:19.2311181Z"
+    },
+    "881131ae": {
+      "automationId": "",
+      "name": "",
+      "controlType": "Pane",
+      "className": "BrowserView",
+      "runtimeId": [
+        42,
+        1967876,
+        4,
+        0,
+        0,
+        8442
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T08:01:19.2319537Z"
+    }
+  },
+  "variables": {}
+}

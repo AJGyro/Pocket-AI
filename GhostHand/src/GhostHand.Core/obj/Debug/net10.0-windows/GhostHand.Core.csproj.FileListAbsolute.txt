@@ -1,0 +1,13 @@
+E:\GhostHand\src\GhostHand.Core\bin\Debug\net10.0-windows\GhostHand.Core.deps.json
+E:\GhostHand\src\GhostHand.Core\bin\Debug\net10.0-windows\GhostHand.Core.dll
+E:\GhostHand\src\GhostHand.Core\bin\Debug\net10.0-windows\GhostHand.Core.pdb
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.csproj.AssemblyReference.cache
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.AssemblyInfoInputs.cache
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.AssemblyInfo.cs
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.csproj.CoreCompileInputs.cache
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.sourcelink.json
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.dll
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\refint\GhostHand.Core.dll
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\GhostHand.Core.pdb
+E:\GhostHand\src\GhostHand.Core\obj\Debug\net10.0-windows\ref\GhostHand.Core.dll

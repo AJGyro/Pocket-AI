@@ -1,0 +1,937 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-03T07:04:19.3794367Z",
+  "updatedAt": "2026-10-03T07:04:27.0318345Z",
+  "application": {
+    "pid": 30580,
+    "processName": "ApplicationFrameHost",
+    "mainWindowHandle": 2033292,
+    "mainWindowTitle": "Calculator"
+  },
+  "selectorPolicy": "stable",
+  "elements": {
+    "cfee5efe": {
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "ApplicationFrameWindow",
+      "runtimeId": [
+        42,
+        2033292
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:22.2071475Z"
+    },
+    "98e63364": {
+      "automationId": "TitleBar",
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "ApplicationFrameTitleBarWindow",
+      "runtimeId": [
+        42,
+        918936
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2204257Z"
+    },
+    "73ad49a3": {
+      "automationId": "SystemMenuBar",
+      "name": "System",
+      "controlType": "MenuBar",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        0
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2213832Z"
+    },
+    "31448c3e": {
+      "name": "System",
+      "controlType": "MenuItem",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        65535
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:22.2221755Z"
+    },
+    "a411144f": {
+      "automationId": "Minimize",
+      "name": "Minimize Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        1
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2226205Z"
+    },
+    "b26e40dc": {
+      "automationId": "Maximize",
+      "name": "Maximize Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2231773Z"
+    },
+    "ba7da053": {
+      "automationId": "Close",
+      "name": "Close Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        3
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2237337Z"
+    },
+    "db69aad2": {
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "Windows.UI.Core.CoreWindow",
+      "runtimeId": [
+        42,
+        1050312
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:22.2253077Z"
+    },
+    "091036ab": {
+      "automationId": "AppName",
+      "name": "Calculator",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2282162Z"
+    },
+    "a75aa93f": {
+      "automationId": "NavView",
+      "controlType": "Custom",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        3
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2307591Z"
+    },
+    "0e90d3bb": {
+      "automationId": "TogglePaneButton",
+      "name": "Open Navigation",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        4
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2321539Z"
+    },
+    "f31f9822": {
+      "controlType": "Group",
+      "className": "LandmarkTarget",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        5
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T07:04:22.2329265Z"
+    },
+    "9032539f": {
+      "automationId": "Header",
+      "name": "Standard Calculator mode",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        6
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2333705Z"
+    },
+    "4c68035a": {
+      "automationId": "NormalAlwaysOnTopButton",
+      "name": "Keep on top",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        7
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:22.2337873Z"
+    },
+    "99659668": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "ApplicationFrameInputSinkWindow",
+      "runtimeId": [
+        42,
+        1900814
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T07:04:22.2346643Z"
+    },
+    "bbbec9d2": {
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "ApplicationFrameWindow",
+      "runtimeId": [
+        42,
+        2033292
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:26.9230966Z"
+    },
+    "47278763": {
+      "automationId": "TitleBar",
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "ApplicationFrameTitleBarWindow",
+      "runtimeId": [
+        42,
+        918936
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9378111Z"
+    },
+    "685c1427": {
+      "automationId": "SystemMenuBar",
+      "name": "System",
+      "controlType": "MenuBar",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        0
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9392108Z"
+    },
+    "5bd70a9f": {
+      "name": "System",
+      "controlType": "MenuItem",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        65535
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:26.9400143Z"
+    },
+    "2e4fc9f5": {
+      "automationId": "Minimize",
+      "name": "Minimize Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        1
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.940655Z"
+    },
+    "5293de12": {
+      "automationId": "Maximize",
+      "name": "Maximize Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.941278Z"
+    },
+    "e6bd8e72": {
+      "automationId": "Close",
+      "name": "Close Calculator",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        918936,
+        4,
+        3
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9418845Z"
+    },
+    "c55917a3": {
+      "name": "Calculator",
+      "controlType": "Window",
+      "className": "Windows.UI.Core.CoreWindow",
+      "runtimeId": [
+        42,
+        1050312
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T07:04:26.9439386Z"
+    },
+    "192f33b3": {
+      "automationId": "AppName",
+      "name": "Calculator",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9494278Z"
+    },
+    "a2ea572f": {
+      "automationId": "NavView",
+      "controlType": "Custom",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        3
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9507324Z"
+    },
+    "67909263": {
+      "automationId": "TogglePaneButton",
+      "name": "Open Navigation",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        4
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9543639Z"
+    },
+    "2973d418": {
+      "automationId": "PaneTitleTextBlock",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        8
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9561414Z"
+    },
+    "32746e1c": {
+      "controlType": "Group",
+      "className": "LandmarkTarget",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        5
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T07:04:26.9583429Z"
+    },
+    "67c2bff4": {
+      "automationId": "CalculatorExpression",
+      "name": "Expression is ",
+      "controlType": "Text",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        9
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9661065Z"
+    },
+    "571a8561": {
+      "automationId": "CalculatorResults",
+      "name": "Display is 0",
+      "controlType": "Text",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        10
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9679956Z"
+    },
+    "a26351ca": {
+      "automationId": "HistoryButton",
+      "name": "Open history flyout",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        11
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9702727Z"
+    },
+    "66ba05e7": {
+      "automationId": "MemoryPanel",
+      "name": "Memory controls",
+      "controlType": "Group",
+      "className": "NamedContainerAutomationPeer",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        12
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9744366Z"
+    },
+    "4840ad23": {
+      "automationId": "ClearMemoryButton",
+      "name": "Clear all memory",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        21
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9778867Z"
+    },
+    "3d2e7dca": {
+      "automationId": "MemRecall",
+      "name": "Memory recall",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        22
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.978945Z"
+    },
+    "a008917a": {
+      "automationId": "MemPlus",
+      "name": "Memory add",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        23
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9802599Z"
+    },
+    "f64d2568": {
+      "automationId": "MemMinus",
+      "name": "Memory subtract",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        24
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.981352Z"
+    },
+    "3d5af912": {
+      "automationId": "memButton",
+      "name": "Memory store",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        25
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9827523Z"
+    },
+    "ade986e9": {
+      "automationId": "MemoryButton",
+      "name": "Open memory flyout",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        26
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9838224Z"
+    },
+    "11ac732f": {
+      "automationId": "DisplayControls",
+      "name": "Display controls",
+      "controlType": "Group",
+      "className": "NamedContainerAutomationPeer",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        13
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9849112Z"
+    },
+    "489d3052": {
+      "automationId": "percentButton",
+      "name": "Percent",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        27
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9874731Z"
+    },
+    "8b12aab5": {
+      "automationId": "clearEntryButton",
+      "name": "Clear entry",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        28
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9886217Z"
+    },
+    "ee6d9b82": {
+      "automationId": "clearButton",
+      "name": "Clear",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        29
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9898211Z"
+    },
+    "5bb45237": {
+      "automationId": "backSpaceButton",
+      "name": "Backspace",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        30
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9909356Z"
+    },
+    "39ce65ba": {
+      "automationId": "StandardFunctions",
+      "name": "Standard functions",
+      "controlType": "Group",
+      "className": "NamedContainerAutomationPeer",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        14
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9920699Z"
+    },
+    "d0066680": {
+      "automationId": "invertButton",
+      "name": "Reciprocal",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        31
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9944706Z"
+    },
+    "18bafbed": {
+      "automationId": "xpower2Button",
+      "name": "Square",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        32
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9961083Z"
+    },
+    "2f0358c3": {
+      "automationId": "squareRootButton",
+      "name": "Square root",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        33
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9970148Z"
+    },
+    "7eaa1f48": {
+      "automationId": "StandardOperators",
+      "name": "Standard operators",
+      "controlType": "Group",
+      "className": "NamedContainerAutomationPeer",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        15
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9978673Z"
+    },
+    "9b8ff70b": {
+      "automationId": "divideButton",
+      "name": "Divide by",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        34
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:26.9999793Z"
+    },
+    "721d471e": {
+      "automationId": "multiplyButton",
+      "name": "Multiply by",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        35
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0008486Z"
+    },
+    "c8e40945": {
+      "automationId": "minusButton",
+      "name": "Minus",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        36
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0017044Z"
+    },
+    "aa937f7b": {
+      "automationId": "plusButton",
+      "name": "Plus",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        37
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0025889Z"
+    },
+    "9f764497": {
+      "automationId": "equalButton",
+      "name": "Equals",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        38
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0035192Z"
+    },
+    "f3f99626": {
+      "automationId": "NumberPad",
+      "name": "Number pad",
+      "controlType": "Group",
+      "className": "NamedContainerAutomationPeer",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        16
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0043698Z"
+    },
+    "a5f1dc92": {
+      "automationId": "num0Button",
+      "name": "Zero",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        39
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0083562Z"
+    },
+    "8fdfaf00": {
+      "automationId": "num1Button",
+      "name": "One",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        40
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0093503Z"
+    },
+    "c7319291": {
+      "automationId": "num2Button",
+      "name": "Two",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        41
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.010327Z"
+    },
+    "30f55bfe": {
+      "automationId": "num3Button",
+      "name": "Three",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        42
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0106792Z"
+    },
+    "b87e0766": {
+      "automationId": "num4Button",
+      "name": "Four",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        43
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0115851Z"
+    },
+    "ab4d6245": {
+      "automationId": "num5Button",
+      "name": "Five",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        44
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0125981Z"
+    },
+    "3f9ad27f": {
+      "automationId": "num6Button",
+      "name": "Six",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        45
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0134483Z"
+    },
+    "a723171e": {
+      "automationId": "num7Button",
+      "name": "Seven",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        46
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0141654Z"
+    },
+    "0110309a": {
+      "automationId": "num8Button",
+      "name": "Eight",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        47
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0155308Z"
+    },
+    "7744c54e": {
+      "automationId": "num9Button",
+      "name": "Nine",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        48
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0164259Z"
+    },
+    "4942567a": {
+      "automationId": "decimalSeparatorButton",
+      "name": "Decimal separator",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        49
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0173564Z"
+    },
+    "fc9d3e19": {
+      "automationId": "negateButton",
+      "name": "Positive negative",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        17
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.018373Z"
+    },
+    "1295b27f": {
+      "automationId": "Header",
+      "name": "Standard Calculator mode",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        6
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0240254Z"
+    },
+    "2ed14d4b": {
+      "automationId": "NormalAlwaysOnTopButton",
+      "name": "Keep on top",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        1050312,
+        4,
+        7
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T07:04:27.0253295Z"
+    },
+    "0fea61c3": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "ApplicationFrameInputSinkWindow",
+      "runtimeId": [
+        42,
+        1900814
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T07:04:27.0304501Z"
+    }
+  },
+  "variables": {}
+}

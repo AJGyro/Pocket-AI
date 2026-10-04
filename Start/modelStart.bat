@@ -1,35 +1,32 @@
 @echo off
-setlocal EnableExtensions EnableDelayedExpansion
+setlocal EnableDelayedExpansion
+title Pocket AI Launcher
 
-REM ============================================================
-REM                    PORTABLE AI
-REM ============================================================
+:: ============================================================
+::                     POCKET AI LAUNCHER
+:: ============================================================
+:: CPU / GPU
+:: WEB / CLI
+:: Qwen3.5-9B / Qwen2.5-Coder-7B
+:: Qwen3.5 Thinking ON / OFF
+:: ============================================================
 
-REM ============================================================
-REM FIND USB ROOT
-REM ModelStart.bat is inside:
-REM USB:\START\ModelStart.bat
-REM ============================================================
+
+:: ============================================================
+:: FIND USB ROOT
+:: ============================================================
 
 set "USB=%~dp0.."
+
 for %%I in ("%USB%") do set "USB=%%~fI"
 
-REM ============================================================
-REM PATHS
-REM ============================================================
 
-REM GPU llama.cpp
+:: ============================================================
+:: LLAMA PATHS
+:: ============================================================
+
 set "LLAMA_GPU=%USB%\server\llama-gpu"
-
-REM CPU llama.cpp
 set "LLAMA_CPU=%USB%\server\llama"
-
-REM Models
-set "MODEL_HOME=%USB%\Models"
-
-REM ============================================================
-REM EXECUTABLES
-REM ============================================================
 
 set "GPU_SERVER=%LLAMA_GPU%\llama-server.exe"
 set "GPU_CLI=%LLAMA_GPU%\llama-cli.exe"
@@ -37,456 +34,603 @@ set "GPU_CLI=%LLAMA_GPU%\llama-cli.exe"
 set "CPU_SERVER=%LLAMA_CPU%\llama-server.exe"
 set "CPU_CLI=%LLAMA_CPU%\llama-cli.exe"
 
-REM ============================================================
-REM MODELS
-REM ============================================================
 
-set "QWEN35=%MODEL_HOME%\Qwen3.5-9B-The-Defiant-Fable-Uncnr-Heretic-NEO-MAX-Q4_K_M.gguf"
+:: ============================================================
+:: MODEL PATHS
+:: ============================================================
 
-set "QWEN25=%MODEL_HOME%\qwen2.5-coder-7b-instruct-q4_k_m.gguf"
+set "QWEN35=%USB%\Models\Qwen3.5-9B-The-Defiant-Fable-Uncnr-Heretic-NEO-MAX-Q4_K_M.gguf"
+
+set "QWEN25=%USB%\Models\qwen2.5-coder-7b-instruct-q4_k_m.gguf"
 
 
-REM ============================================================
-REM MENU
-REM ============================================================
+:: ============================================================
+:: ANSI COLORS
+:: ============================================================
+
+for /F "delims=" %%A in ('echo prompt $E^| cmd') do set "ESC=%%A"
+
+set "RESET=!ESC![0m"
+set "BOLD=!ESC![1m"
+
+set "RED=!ESC![91m"
+set "GREEN=!ESC![92m"
+set "YELLOW=!ESC![93m"
+set "BLUE=!ESC![94m"
+set "MAGENTA=!ESC![95m"
+set "CYAN=!ESC![96m"
+set "WHITE=!ESC![97m"
+
+
+:: ============================================================
+:: MAIN MENU
+:: ============================================================
 
 :MENU
 
 cls
 
-
 echo.
-echo ========================================
-echo              PORTABLE AI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                    POCKET AI LAUNCHER!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
 echo.
-echo USB ROOT:
-echo %USB%
+echo !WHITE!USB Root : !YELLOW!!USB!!RESET!
 echo.
-echo ----------------------------------------
+echo !MAGENTA!!BOLD!Select Hardware!RESET!
 echo.
-echo [1] Qwen3.5-9B        [GPU Server]
-echo [2] Qwen2.5-Coder-7B  [GPU Server]
+echo !GREEN![1]!RESET! GPU
+echo !BLUE![2]!RESET! CPU
 echo.
-echo [3] Qwen3.5 CLI       [GPU]
-echo [4] Qwen2.5 CLI       [GPU]
-echo.
-echo [5] Qwen3.5 CLI       [CPU]
-echo [6] Qwen2.5 CLI       [CPU]
-echo.
-echo [7] Exit
-echo.
-echo ----------------------------------------
+echo !RED![3]!RESET! Exit
 echo.
 
-set /p "CHOICE=Select: "
+choice /C 123 /N /M "Select: "
 
-if "%CHOICE%"=="1" goto QWEN35_GPU_SERVER
-if "%CHOICE%"=="2" goto QWEN25_GPU_SERVER
-if "%CHOICE%"=="3" goto QWEN35_GPU_CLI
-if "%CHOICE%"=="4" goto QWEN25_GPU_CLI
-if "%CHOICE%"=="5" goto QWEN35_CPU_CLI
-if "%CHOICE%"=="6" goto QWEN25_CPU_CLI
-if "%CHOICE%"=="7" goto EXIT
+if errorlevel 3 goto EXIT
+if errorlevel 2 (
+    set "HARDWARE=CPU"
+    goto MODE_MENU
+)
 
-echo.
-echo Invalid choice.
-timeout /t 2 >nul
-goto MENU
+if errorlevel 1 (
+    set "HARDWARE=GPU"
+    goto MODE_MENU
+)
 
 
-REM ============================================================
-REM QWEN3.5 GPU SERVER
-REM ============================================================
+:: ============================================================
+:: MODE MENU
+:: ============================================================
 
-:QWEN35_GPU_SERVER
+:MODE_MENU
 
 cls
 
 echo.
-echo ========================================
-echo        Qwen3.5-9B GPU SERVER
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                         POCKET AI!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
+echo.
+echo Hardware : !YELLOW!!HARDWARE!!RESET!
+echo.
+echo !MAGENTA!!BOLD!Select Mode!RESET!
+echo.
+echo !GREEN![1]!RESET! Web Server
+echo !BLUE![2]!RESET! CLI / Terminal
+echo.
+echo !RED![3]!RESET! Back
 echo.
 
-if not exist "%GPU_SERVER%" (
-    echo ERROR:
-    echo GPU llama-server.exe not found.
-    echo.
-    echo Expected:
-    echo %GPU_SERVER%
-    echo.
-    pause
-    goto MENU
+choice /C 123 /N /M "Select: "
+
+if errorlevel 3 goto MENU
+
+if errorlevel 2 (
+    set "MODE=CLI"
+    goto MODEL_MENU
 )
 
-if not exist "%QWEN35%" (
-    echo ERROR:
-    echo Qwen3.5 model not found.
-    echo.
-    echo Expected:
-    echo %QWEN35%
-    echo.
-    pause
-    goto MENU
+if errorlevel 1 (
+    set "MODE=WEB"
+    goto MODEL_MENU
 )
 
-echo GPU Engine:
-echo %GPU_SERVER%
-echo.
-echo Model:
-echo %QWEN35%
-echo.
-echo Server:
-echo http://127.0.0.1:8080
-echo.
-echo Starting Qwen3.5 GPU server...
-echo.
 
-REM Start server in a NEW console window.
-REM The main menu will remain open.
+:: ============================================================
+:: MODEL MENU
+:: ============================================================
 
-start "Qwen3.5-9B GPU Server" /D "%LLAMA_GPU%" "%GPU_SERVER%" ^
-  -m "%QWEN35%" ^
-  -c 16384 ^
-  --jinja ^
-  --alias "qwen3.5-9b"
-
-echo.
-echo ========================================
-echo Qwen3.5 GPU server started.
-echo ========================================
-echo.
-echo Server window opened separately.
-echo.
-echo Returning to menu...
-timeout /t 2 >nul
-
-goto MENU
-
-
-REM ============================================================
-REM QWEN2.5 GPU SERVER
-REM ============================================================
-
-:QWEN25_GPU_SERVER
+:MODEL_MENU
 
 cls
 
 echo.
-echo ========================================
-echo       Qwen2.5-Coder-7B GPU SERVER
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                       SELECT MODEL!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
+echo.
+echo Hardware : !YELLOW!!HARDWARE!!RESET!
+echo Mode     : !YELLOW!!MODE!!RESET!
+echo.
+echo !MAGENTA!!BOLD!Available Models!RESET!
+echo.
+echo !GREEN![1]!RESET! Qwen3.5-9B
+echo !BLUE![2]!RESET! Qwen2.5-Coder-7B
+echo.
+echo !RED![3]!RESET! Back
 echo.
 
-if not exist "%GPU_SERVER%" (
-    echo ERROR:
-    echo GPU llama-server.exe not found.
-    echo.
-    echo Expected:
-    echo %GPU_SERVER%
-    echo.
-    pause
-    goto MENU
+choice /C 123 /N /M "Select: "
+
+if errorlevel 3 goto MODE_MENU
+
+if errorlevel 2 (
+    set "MODEL=%QWEN25%"
+    set "MODEL_NAME=Qwen2.5-Coder-7B"
+    set "REASONING="
+    goto START
 )
 
-if not exist "%QWEN25%" (
-    echo ERROR:
-    echo Qwen2.5 model not found.
-    echo.
-    echo Expected:
-    echo %QWEN25%
-    echo.
-    pause
-    goto MENU
+if errorlevel 1 (
+    set "MODEL=%QWEN35%"
+    set "MODEL_NAME=Qwen3.5-9B"
+    goto REASONING_MENU
 )
 
-echo GPU Engine:
-echo %GPU_SERVER%
-echo.
-echo Model:
-echo %QWEN25%
-echo.
-echo Server:
-echo http://127.0.0.1:8080
-echo.
-echo Starting Qwen2.5 GPU server...
-echo.
 
-REM Start server in a NEW console window.
+:: ============================================================
+:: QWEN3.5 THINKING MENU
+:: ============================================================
 
-start "Qwen2.5-Coder-7B GPU Server" /D "%LLAMA_GPU%" "%GPU_SERVER%" ^
-  -m "%QWEN25%" ^
-  -c 16384 ^
-  --jinja ^
-  --alias "qwen2.5-coder-7b"
-
-echo.
-echo ========================================
-echo Qwen2.5 GPU server started.
-echo ========================================
-echo.
-echo Server window opened separately.
-echo.
-echo Returning to menu...
-timeout /t 2 >nul
-
-goto MENU
-
-
-REM ============================================================
-REM QWEN3.5 GPU CLI
-REM ============================================================
-
-:QWEN35_GPU_CLI
+:REASONING_MENU
 
 cls
 
 echo.
-echo ========================================
-echo          Qwen3.5-9B GPU CLI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                    QWEN3.5 REASONING!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
+echo.
+echo Model : !YELLOW!Qwen3.5-9B!RESET!
+echo.
+echo !MAGENTA!!BOLD!Thinking / Reasoning Mode!RESET!
+echo.
+echo !GREEN![1]!RESET! Thinking ON
+echo !BLUE![2]!RESET! Thinking OFF
+echo.
+echo !RED![3]!RESET! Back
 echo.
 
-if not exist "%GPU_CLI%" (
-    echo ERROR:
-    echo GPU llama-cli.exe not found.
-    echo.
-    echo Expected:
-    echo %GPU_CLI%
-    echo.
-    pause
-    goto MENU
+choice /C 123 /N /M "Select: "
+
+if errorlevel 3 goto MODEL_MENU
+
+if errorlevel 2 (
+    set "REASONING=off"
+    goto START
 )
 
-if not exist "%QWEN35%" (
-    echo ERROR:
-    echo Qwen3.5 model not found.
-    echo.
-    echo Expected:
-    echo %QWEN35%
-    echo.
-    pause
-    goto MENU
+if errorlevel 1 (
+    set "REASONING=on"
+    goto START
 )
 
-echo GPU Engine:
-echo %GPU_CLI%
-echo.
-echo Model:
-echo %QWEN35%
-echo.
-echo Starting Qwen3.5 GPU CLI...
-echo.
 
-cd /d "%LLAMA_GPU%"
+:: ============================================================
+:: START
+:: ============================================================
 
-"%GPU_CLI%" ^
-  -m "%QWEN35%"
+:START
 
-echo.
-echo ========================================
-echo Qwen3.5 GPU CLI closed.
-echo ========================================
-echo.
-pause
+if /I "!MODE!"=="CLI" goto START_CLI
+
+if /I "!MODE!"=="WEB" goto START_WEB
 
 goto MENU
 
 
-REM ============================================================
-REM QWEN2.5 GPU CLI
-REM ============================================================
+:: ============================================================
+:: CLI
+:: ============================================================
 
-:QWEN25_GPU_CLI
+:START_CLI
 
 cls
 
 echo.
-echo ========================================
-echo        Qwen2.5-Coder-7B GPU CLI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                         STARTING CLI!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
+echo.
+echo Hardware : !YELLOW!!HARDWARE!!RESET!
+echo Model    : !YELLOW!!MODEL_NAME!!RESET!
+
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    echo Thinking : !YELLOW!!REASONING!!RESET!
+)
+
+echo.
+echo Model Path:
+echo !WHITE!!MODEL!!RESET!
+echo.
+echo ------------------------------------------------------------
 echo.
 
-if not exist "%GPU_CLI%" (
-    echo ERROR:
-    echo GPU llama-cli.exe not found.
+
+:: ============================================================
+:: CHECK MODEL
+:: ============================================================
+
+if not exist "!MODEL!" (
+    echo.
+    echo !RED![ERROR] Model file not found.!RESET!
     echo.
     echo Expected:
-    echo %GPU_CLI%
+    echo !MODEL!
     echo.
     pause
     goto MENU
 )
 
-if not exist "%QWEN25%" (
-    echo ERROR:
-    echo Qwen2.5 model not found.
+
+:: ============================================================
+:: SELECT CPU/GPU
+:: ============================================================
+
+if /I "!HARDWARE!"=="GPU" goto GPU_CLI
+
+goto CPU_CLI
+
+
+:: ============================================================
+:: GPU CLI
+:: ============================================================
+
+:GPU_CLI
+
+echo !CYAN![GPU] Checking llama-cli...!RESET!
+echo.
+
+if not exist "!GPU_CLI!" (
+    echo !RED![ERROR] GPU llama-cli.exe not found.!RESET!
     echo.
     echo Expected:
-    echo %QWEN25%
+    echo !GPU_CLI!
     echo.
     pause
     goto MENU
 )
 
-echo GPU Engine:
-echo %GPU_CLI%
-echo.
-echo Model:
-echo %QWEN25%
-echo.
-echo Starting Qwen2.5 GPU CLI...
+echo !GREEN![OK] GPU llama-cli found.!RESET!
 echo.
 
-cd /d "%LLAMA_GPU%"
+echo !GREEN!Starting Qwen CLI...!RESET!
+echo.
 
-"%GPU_CLI%" ^
-  -m "%QWEN25%"
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    echo Reasoning : !YELLOW!!REASONING!!RESET!
+)
 
 echo.
-echo ========================================
-echo Qwen2.5 GPU CLI closed.
-echo ========================================
+echo ------------------------------------------------------------
 echo.
-pause
+
+cd /d "!LLAMA_GPU!"
+
+
+:: QWEN3.5
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    "!GPU_CLI!" -m "!MODEL!" --jinja --reasoning !REASONING!
+    set "EXITCODE=!ERRORLEVEL!"
+    goto CLI_FINISHED
+)
+
+
+:: QWEN2.5
+"!GPU_CLI!" -m "!MODEL!" --jinja
+
+set "EXITCODE=!ERRORLEVEL!"
+
+goto CLI_FINISHED
+
+
+:: ============================================================
+:: CPU CLI
+:: ============================================================
+
+:CPU_CLI
+
+echo !CYAN![CPU] Checking llama-cli...!RESET!
+echo.
+
+if not exist "!CPU_CLI!" (
+    echo !RED![ERROR] CPU llama-cli.exe not found.!RESET!
+    echo.
+    echo Expected:
+    echo !CPU_CLI!
+    echo.
+    pause
+    goto MENU
+)
+
+echo !GREEN![OK] CPU llama-cli found.!RESET!
+echo.
+
+echo !GREEN!Starting Qwen CLI...!RESET!
+echo.
+
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    echo Reasoning : !YELLOW!!REASONING!!RESET!
+)
+
+echo.
+echo ------------------------------------------------------------
+echo.
+
+cd /d "!LLAMA_CPU!"
+
+
+:: QWEN3.5
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    "!CPU_CLI!" -m "!MODEL!" --jinja --reasoning !REASONING!
+    set "EXITCODE=!ERRORLEVEL!"
+    goto CLI_FINISHED
+)
+
+
+:: QWEN2.5
+"!CPU_CLI!" -m "!MODEL!" --jinja
+
+set "EXITCODE=!ERRORLEVEL!"
+
+goto CLI_FINISHED
+
+
+:: ============================================================
+:: CLI FINISHED
+:: ============================================================
+
+:CLI_FINISHED
+
+echo.
+echo ------------------------------------------------------------
+echo.
+
+if "!EXITCODE!"=="0" (
+    echo !GREEN!llama-cli exited normally.!RESET!
+) else (
+    echo !YELLOW!llama-cli exited with code: !EXITCODE!!RESET!
+)
+
+echo.
+echo !CYAN!Press any key to return to Pocket AI Launcher.!RESET!
+pause >nul
 
 goto MENU
 
 
-REM ============================================================
-REM QWEN3.5 CPU CLI
-REM ============================================================
+:: ============================================================
+:: WEB SERVER
+:: ============================================================
 
-:QWEN35_CPU_CLI
+:START_WEB
 
 cls
 
 echo.
-echo ========================================
-echo          Qwen3.5-9B CPU CLI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                    STARTING WEB SERVER!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
+echo.
+echo Hardware : !YELLOW!!HARDWARE!!RESET!
+echo Model    : !YELLOW!!MODEL_NAME!!RESET!
+
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    echo Thinking : !YELLOW!!REASONING!!RESET!
+)
+
+echo.
+echo URL:
+echo !GREEN!http://127.0.0.1:8080!RESET!
+echo.
+echo ------------------------------------------------------------
 echo.
 
-if not exist "%CPU_CLI%" (
-    echo ERROR:
-    echo CPU llama-cli.exe not found.
+
+:: ============================================================
+:: CHECK MODEL
+:: ============================================================
+
+if not exist "!MODEL!" (
+    echo.
+    echo !RED![ERROR] Model file not found.!RESET!
     echo.
     echo Expected:
-    echo %CPU_CLI%
+    echo !MODEL!
     echo.
     pause
     goto MENU
 )
 
-if not exist "%QWEN35%" (
-    echo ERROR:
-    echo Qwen3.5 model not found.
+
+:: ============================================================
+:: SELECT CPU/GPU
+:: ============================================================
+
+if /I "!HARDWARE!"=="GPU" goto GPU_WEB
+
+goto CPU_WEB
+
+
+:: ============================================================
+:: GPU WEB
+:: ============================================================
+
+:GPU_WEB
+
+echo !CYAN![GPU] Checking llama-server...!RESET!
+echo.
+
+if not exist "!GPU_SERVER!" (
+    echo !RED![ERROR] GPU llama-server.exe not found.!RESET!
     echo.
     echo Expected:
-    echo %QWEN35%
+    echo !GPU_SERVER!
     echo.
     pause
     goto MENU
 )
 
-echo CPU Engine:
-echo %CPU_CLI%
-echo.
-echo Model:
-echo %QWEN35%
-echo.
-echo Starting Qwen3.5 CPU CLI...
+echo !GREEN![OK] GPU llama-server found.!RESET!
 echo.
 
-cd /d "%LLAMA_CPU%"
-
-"%CPU_CLI%" ^
-  -m "%QWEN35%"
-
+echo !GREEN!Starting server...!RESET!
 echo.
-echo ========================================
-echo Qwen3.5 CPU CLI closed.
-echo ========================================
+
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" goto GPU_WEB_QWEN35
+
+:: QWEN2.5 WEB
+start "Pocket AI - GPU Server" /D "!LLAMA_GPU!" "!GPU_SERVER!" ^
+    -m "!MODEL!" ^
+    -c 16384 ^
+    --jinja ^
+    --alias "!MODEL_NAME!"
+
+goto WEB_STARTED
+
+
+:: ============================================================
+:: GPU QWEN3.5 WEB
+:: ============================================================
+
+:GPU_WEB_QWEN35
+
+start "Pocket AI - GPU Server" /D "!LLAMA_GPU!" "!GPU_SERVER!" ^
+    -m "!MODEL!" ^
+    -c 16384 ^
+    --jinja ^
+    --reasoning !REASONING! ^
+    --alias "!MODEL_NAME!"
+
+goto WEB_STARTED
+
+
+:: ============================================================
+:: CPU WEB
+:: ============================================================
+
+:CPU_WEB
+
+echo !CYAN![CPU] Checking llama-server...!RESET!
 echo.
-pause
 
-goto MENU
+if not exist "!CPU_SERVER!" (
+    echo !RED![ERROR] CPU llama-server.exe not found.!RESET!
+    echo.
+    echo Expected:
+    echo !CPU_SERVER!
+    echo.
+    pause
+    goto MENU
+)
+
+echo !GREEN![OK] CPU llama-server found.!RESET!
+echo.
+
+echo !GREEN!Starting server...!RESET!
+echo.
+
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" goto CPU_WEB_QWEN35
+
+:: QWEN2.5 WEB
+start "Pocket AI - CPU Server" /D "!LLAMA_CPU!" "!CPU_SERVER!" ^
+    -m "!MODEL!" ^
+    -c 16384 ^
+    --jinja ^
+    --alias "!MODEL_NAME!"
+
+goto WEB_STARTED
 
 
-REM ============================================================
-REM QWEN2.5 CPU CLI
-REM ============================================================
+:: ============================================================
+:: CPU QWEN3.5 WEB
+:: ============================================================
 
-:QWEN25_CPU_CLI
+:CPU_WEB_QWEN35
+
+start "Pocket AI - CPU Server" /D "!LLAMA_CPU!" "!CPU_SERVER!" ^
+    -m "!MODEL!" ^
+    -c 16384 ^
+    --jinja ^
+    --reasoning !REASONING! ^
+    --alias "!MODEL_NAME!"
+
+goto WEB_STARTED
+
+
+:: ============================================================
+:: WEB STARTED
+:: ============================================================
+
+:WEB_STARTED
+
+timeout /t 3 /nobreak >nul
 
 cls
 
 echo.
-echo ========================================
-echo        Qwen2.5-Coder-7B CPU CLI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                     SERVER STARTED!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
 echo.
+echo Hardware : !GREEN!!HARDWARE!!RESET!
+echo Model    : !YELLOW!!MODEL_NAME!!RESET!
 
-if not exist "%CPU_CLI%" (
-    echo ERROR:
-    echo CPU llama-cli.exe not found.
-    echo.
-    echo Expected:
-    echo %CPU_CLI%
-    echo.
-    pause
-    goto MENU
+if /I "!MODEL_NAME!"=="Qwen3.5-9B" (
+    echo Thinking : !YELLOW!!REASONING!!RESET!
 )
 
-if not exist "%QWEN25%" (
-    echo ERROR:
-    echo Qwen2.5 model not found.
-    echo.
-    echo Expected:
-    echo %QWEN25%
-    echo.
-    pause
-    goto MENU
-)
+echo.
+echo URL:
+echo !GREEN!!BOLD!http://127.0.0.1:8080!RESET!
+echo.
+echo ------------------------------------------------------------
+echo.
+echo !GREEN![OK] llama-server process started.!RESET!
+echo.
+echo !WHITE!The llama-server is running in a separate terminal.!RESET!
+echo !WHITE!Keep that terminal open while using the Web UI.!RESET!
+echo.
+echo !YELLOW!Open in browser:!RESET!
+echo !GREEN!http://127.0.0.1:8080!RESET!
+echo.
+echo ------------------------------------------------------------
+echo.
+echo !CYAN!Press any key to return to the launcher.!RESET!
 
-echo CPU Engine:
-echo %CPU_CLI%
-echo.
-echo Model:
-echo %QWEN25%
-echo.
-echo Starting Qwen2.5 CPU CLI...
-echo.
-
-cd /d "%LLAMA_CPU%"
-
-"%CPU_CLI%" ^
-  -m "%QWEN25%"
-
-echo.
-echo ========================================
-echo Qwen2.5 CPU CLI closed.
-echo ========================================
-echo.
-pause
+pause >nul
 
 goto MENU
 
 
-REM ============================================================
-REM EXIT
-REM ============================================================
+:: ============================================================
+:: EXIT
+:: ============================================================
 
 :EXIT
 
 cls
 
 echo.
-echo ========================================
-echo        Exiting Portable AI
-echo ========================================
+echo !CYAN!!BOLD!============================================================!RESET!
+echo !CYAN!!BOLD!                       POCKET AI!RESET!
+echo !CYAN!!BOLD!============================================================!RESET!
 echo.
+echo !GREEN!Thank you for using Pocket AI.!RESET!
+echo.
+
+timeout /t 2 /nobreak >nul
 
 endlocal
 exit /b

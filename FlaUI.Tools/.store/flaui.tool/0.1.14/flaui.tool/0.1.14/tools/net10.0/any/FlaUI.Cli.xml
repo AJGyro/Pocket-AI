@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlaUI.Cli</name>
+    </assembly>
+    <members>
+        <member name="T:FlaUI.Cli.Commands.Report.ReportCommand">
+            <summary>
+            Creates a GitHub issue on the FlaUI.Cli repository via the gh CLI.
+            </summary>
+        </member>
+        <member name="T:FlaUI.Cli.Commands.Screenshot.ScreenshotCommand">
+            <summary>
+            Captures a screenshot of a window or element and saves it to a file.
+            </summary>
+        </member>
+    </members>
+</doc>

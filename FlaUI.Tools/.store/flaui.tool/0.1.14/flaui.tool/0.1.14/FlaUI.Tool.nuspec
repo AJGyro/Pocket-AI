@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FlaUI.Tool</id>
+    <version>0.1.14</version>
+    <authors>Iiro Rahkonen</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/kodroi/FlaUI.Cli</projectUrl>
+    <description>AI-agent-friendly CLI for Windows UI Automation. Drive applications, find elements with quality-rated selectors, and record interactions — all via JSON output.</description>
+    <tags>UIA FlaUI CLI flaui ui-automation testing accessibility wpf winforms cli dotnet-tool</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/kodroi/FlaUI.Cli" commit="7d9be8f908ea9fe909fee663f5ddf58dfd171078" />
+    <frameworkReferences>
+      <group targetFramework="net10.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+</package>

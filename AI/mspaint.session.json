@@ -1,0 +1,15 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-03T06:36:34.4641187Z",
+  "updatedAt": "2026-10-03T06:36:34.4745922Z",
+  "application": {
+    "pid": 3036,
+    "processName": "mspaint",
+    "mainWindowHandle": 1115074,
+    "mainWindowTitle": "Untitled - Paint"
+  },
+  "selectorPolicy": "stable",
+  "elements": {},
+  "variables": {}
+}

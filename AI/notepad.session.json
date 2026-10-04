@@ -1,0 +1,518 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-03T16:58:13.9156078Z",
+  "updatedAt": "2026-10-03T16:58:34.1429834Z",
+  "application": {
+    "pid": 11024,
+    "processName": "Notepad",
+    "mainWindowHandle": 395672,
+    "mainWindowTitle": "*public class MaxOfTwoNumbers { - Notepad"
+  },
+  "selectorPolicy": "stable",
+  "elements": {
+    "06ba4654": {
+      "name": "*public class MaxOfTwoNumbers { - Notepad",
+      "controlType": "Window",
+      "className": "Notepad",
+      "runtimeId": [
+        42,
+        395672
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.3413323Z"
+    },
+    "dc24d53a": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "NotepadTextBox",
+      "runtimeId": [
+        42,
+        788900
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.3692632Z"
+    },
+    "c934fd21": {
+      "name": "Text editor",
+      "controlType": "Document",
+      "className": "RichEditD2DPT",
+      "runtimeId": [
+        42,
+        199080
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.3806828Z"
+    },
+    "3fcf42e2": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "Microsoft.UI.Content.DesktopChildSiteBridge",
+      "runtimeId": [
+        42,
+        198314
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.3857054Z"
+    },
+    "01d20610": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "InputSiteWindowClass",
+      "runtimeId": [
+        42,
+        330146
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.3973022Z"
+    },
+    "5c2e335f": {
+      "automationId": "Tabs",
+      "controlType": "Tab",
+      "className": "Microsoft.UI.Xaml.Controls.TabView",
+      "runtimeId": [
+        42,
+        330146,
+        4,
+        1
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4067297Z"
+    },
+    "617937e5": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "Microsoft.UI.Content.DesktopChildSiteBridge",
+      "runtimeId": [
+        42,
+        264672
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.4090211Z"
+    },
+    "a25ea8d6": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "InputSiteWindowClass",
+      "runtimeId": [
+        42,
+        330168
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.4163639Z"
+    },
+    "ad11d15e": {
+      "automationId": "MenuBar",
+      "controlType": "MenuBar",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.442177Z"
+    },
+    "0f973d49": {
+      "name": "Headings",
+      "controlType": "Button",
+      "className": "Microsoft.UI.Xaml.Controls.DropDownButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        3
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4442568Z"
+    },
+    "baa2ab41": {
+      "name": "Lists",
+      "controlType": "Button",
+      "className": "Microsoft.UI.Xaml.Controls.DropDownButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        4
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4458673Z"
+    },
+    "62731bd5": {
+      "name": "Bold (Ctrl\u002BB)",
+      "controlType": "Button",
+      "className": "ToggleButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        5
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4477175Z"
+    },
+    "b1c2ae16": {
+      "name": "Italic (Ctrl\u002BI)",
+      "controlType": "Button",
+      "className": "ToggleButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        6
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4494975Z"
+    },
+    "1c14558a": {
+      "name": "Strikethrough (Ctrl\u002BShift\u002BX)",
+      "controlType": "Button",
+      "className": "ToggleButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        7
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4506399Z"
+    },
+    "dfcbbde8": {
+      "name": "Link (Ctrl\u002BK)",
+      "controlType": "Button",
+      "className": "ToggleButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        8
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4516942Z"
+    },
+    "dc8a43b9": {
+      "name": "Table",
+      "controlType": "Button",
+      "className": "Microsoft.UI.Xaml.Controls.DropDownButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        9
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4528498Z"
+    },
+    "9a72cccd": {
+      "name": "Clear formatting (Ctrl\u002BSpace)",
+      "controlType": "Button",
+      "className": "ToggleButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        10
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4540009Z"
+    },
+    "d3780acb": {
+      "automationId": "RewriteDropDownButton",
+      "name": "Writing tools",
+      "controlType": "Button",
+      "className": "Microsoft.UI.Xaml.Controls.DropDownButton",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        11
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4547968Z"
+    },
+    "5c7667eb": {
+      "automationId": "FREButton",
+      "name": "What\u0027s new",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        12
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4554037Z"
+    },
+    "7a6f14e1": {
+      "automationId": "AvatarButton",
+      "name": "User avatar",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        13
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.456145Z"
+    },
+    "fe8118d8": {
+      "automationId": "SettingsButton",
+      "name": "Settings",
+      "controlType": "Button",
+      "className": "Button",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        16
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4573769Z"
+    },
+    "197945e2": {
+      "automationId": "PrivacyTeachingTip",
+      "controlType": "Window",
+      "className": "Microsoft.UI.Xaml.Controls.TeachingTip",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        17
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4600525Z"
+    },
+    "14ed5e4d": {
+      "automationId": "PsDownloadDetailTeachingTip",
+      "controlType": "Pane",
+      "className": "Microsoft.UI.Xaml.Controls.TeachingTip",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        18
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4608968Z"
+    },
+    "c97e1e48": {
+      "automationId": "PsDownloadLightTeachingTip",
+      "name": "Local AI model must complete downloading to use this feature while signed out.",
+      "controlType": "Pane",
+      "className": "Microsoft.UI.Xaml.Controls.TeachingTip",
+      "runtimeId": [
+        42,
+        330168,
+        4,
+        19
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4625874Z"
+    },
+    "502b5443": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "Microsoft.UI.Content.DesktopChildSiteBridge",
+      "runtimeId": [
+        42,
+        592350
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.4643423Z"
+    },
+    "acb56e31": {
+      "name": "",
+      "controlType": "Pane",
+      "className": "InputSiteWindowClass",
+      "runtimeId": [
+        42,
+        199098
+      ],
+      "selectorQuality": "fragile",
+      "lastVerified": "2026-10-03T16:58:17.4690414Z"
+    },
+    "d4273efd": {
+      "automationId": "ContentTextBlock",
+      "name": "Line 1,\nColumn 1",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        20
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.475303Z"
+    },
+    "78e6bdb6": {
+      "automationId": "ContentTextBlock",
+      "name": "335 characters",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        21
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4763285Z"
+    },
+    "288d1808": {
+      "automationId": "ContentTextBlock",
+      "name": "Plain text",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        22
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4771311Z"
+    },
+    "6f00b29c": {
+      "automationId": "ContentTextBlock",
+      "name": "Zoom",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        23
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.477809Z"
+    },
+    "2c2ad646": {
+      "automationId": "ContentTextBlock",
+      "name": " Windows (CRLF)",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        24
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4789861Z"
+    },
+    "0c0e9e34": {
+      "automationId": "ContentTextBlock",
+      "name": " UTF-8",
+      "controlType": "Text",
+      "className": "TextBlock",
+      "runtimeId": [
+        42,
+        199098,
+        4,
+        25
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4797986Z"
+    },
+    "14c9de84": {
+      "automationId": "TitleBar",
+      "controlType": "TitleBar",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483647,
+        395672,
+        -2,
+        0
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4798846Z"
+    },
+    "259b4751": {
+      "automationId": "SystemMenuBar",
+      "name": "System",
+      "controlType": "MenuBar",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483646,
+        11024,
+        66155,
+        0
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4816278Z"
+    },
+    "b4fee410": {
+      "name": "System",
+      "controlType": "MenuItem",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483646,
+        22396,
+        66155,
+        1
+      ],
+      "selectorQuality": "acceptable",
+      "lastVerified": "2026-10-03T16:58:17.4823496Z"
+    },
+    "b580f6b4": {
+      "automationId": "Minimize-Restore",
+      "name": "Minimize",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483647,
+        395672,
+        -2,
+        2
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4823875Z"
+    },
+    "dcd8601d": {
+      "automationId": "Maximize-Restore",
+      "name": "Maximize",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483647,
+        395672,
+        -2,
+        3
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.482446Z"
+    },
+    "bf16a2cb": {
+      "automationId": "Close",
+      "name": "Close",
+      "controlType": "Button",
+      "runtimeId": [
+        42,
+        395672,
+        3,
+        -2147483647,
+        395672,
+        -2,
+        5
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-03T16:58:17.4824889Z"
+    }
+  },
+  "variables": {}
+}

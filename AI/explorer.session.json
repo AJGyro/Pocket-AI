@@ -1,0 +1,15 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-03T06:37:04.5003652Z",
+  "updatedAt": "2026-10-03T06:37:04.5037459Z",
+  "application": {
+    "pid": 21988,
+    "processName": "explorer",
+    "mainWindowHandle": 2492060,
+    "mainWindowTitle": ""
+  },
+  "selectorPolicy": "stable",
+  "elements": {},
+  "variables": {}
+}

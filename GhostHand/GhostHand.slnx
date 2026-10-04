@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GhostHand.Core/GhostHand.Core.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/GhostHand.Core.Tests/GhostHand.Core.Tests.csproj" />
+  </Folder>
+</Solution>
