@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GhostHand.Core.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b74c23f1bd7cd3feaaf727271a00007b66cb7d02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32ed24303e6d2e3b81e3046e48800e59ee3b30dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("GhostHand.Core.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GhostHand.Core.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

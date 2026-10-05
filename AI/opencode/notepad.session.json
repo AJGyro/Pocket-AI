@@ -1,0 +1,28 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-05T06:52:37.2731913Z",
+  "updatedAt": "2026-10-05T06:52:39.6249687Z",
+  "application": {
+    "pid": 26356,
+    "processName": "Notepad",
+    "mainWindowHandle": 722594,
+    "mainWindowTitle": ""
+  },
+  "selectorPolicy": "stable",
+  "elements": {
+    "669f7b34": {
+      "automationId": "Input Indicator overlay window",
+      "name": "",
+      "controlType": "Pane",
+      "className": "UAC_InputIndicatorOverlayWnd",
+      "runtimeId": [
+        42,
+        722594
+      ],
+      "selectorQuality": "stable",
+      "lastVerified": "2026-10-05T06:52:39.609666Z"
+    }
+  },
+  "variables": {}
+}

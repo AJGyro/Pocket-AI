@@ -493,7 +493,7 @@ if /I "!MODEL_NAME!"=="Qwen3.5-9B" goto GPU_WEB_QWEN35
 :: QWEN2.5 WEB
 start "Pocket AI - GPU Server" /D "!LLAMA_GPU!" "!GPU_SERVER!" ^
     -m "!MODEL!" ^
-    -c 16384 ^
+    -c 32768 ^
     --jinja ^
     --alias "!MODEL_NAME!"
 
@@ -508,7 +508,7 @@ goto WEB_STARTED
 
 start "Pocket AI - GPU Server" /D "!LLAMA_GPU!" "!GPU_SERVER!" ^
     -m "!MODEL!" ^
-    -c 16384 ^
+    -c 32768 ^
     --jinja ^
     --reasoning !REASONING! ^
     --alias "!MODEL_NAME!"
@@ -546,7 +546,7 @@ if /I "!MODEL_NAME!"=="Qwen3.5-9B" goto CPU_WEB_QWEN35
 :: QWEN2.5 WEB
 start "Pocket AI - CPU Server" /D "!LLAMA_CPU!" "!CPU_SERVER!" ^
     -m "!MODEL!" ^
-    -c 16384 ^
+    -c 32768 ^
     --jinja ^
     --alias "!MODEL_NAME!"
 
@@ -561,7 +561,7 @@ goto WEB_STARTED
 
 start "Pocket AI - CPU Server" /D "!LLAMA_CPU!" "!CPU_SERVER!" ^
     -m "!MODEL!" ^
-    -c 16384 ^
+    -c 32768 ^
     --jinja ^
     --reasoning !REASONING! ^
     --alias "!MODEL_NAME!"

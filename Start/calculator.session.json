@@ -1,0 +1,15 @@
+{
+  "schema": "flaui-session-v1",
+  "version": 1,
+  "createdAt": "2026-10-05T08:33:23.3937676Z",
+  "updatedAt": "2026-10-05T08:33:23.4125975Z",
+  "application": {
+    "pid": 27000,
+    "processName": "CalculatorApp",
+    "mainWindowHandle": 198100,
+    "mainWindowTitle": "Calculator"
+  },
+  "selectorPolicy": "stable",
+  "elements": {},
+  "variables": {}
+}
